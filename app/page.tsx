@@ -1,4 +1,4 @@
-import { Header } from "@/components";
+import { Header, Hero } from "@/components";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,9 +9,10 @@ export default function Home() {
         height={0}
         width={1250}
         alt="light wave"
-        className="object-contain absolute right-0 mix-blend-screen w-[1250px] max-sm:hidden"
+        className="object-contain absolute right-0 mix-blend-screen w-[1250px] max-sm:hidden z-[-1]"
       />
       <Header />
+      <Hero />
     </div>
   );
 }
