@@ -3,7 +3,7 @@ import { BsTwitter, BsDiscord } from "react-icons/bs";
 
 const Header = () => {
   return (
-    <header className="flex justify-center fixed w-full top-0 left-0">
+    <header className="flex justify-center fixed w-full top-0 left-0 backdrop-blur-sm">
       <div className="px-[16px] flex justify-between items-center w-full container py-[46px] max-lg:py-[20px]">
         <div>
           <a href="#home">
