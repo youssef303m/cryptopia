@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main className="h-screen flex items-center">
+    <main className="h-screen flex justify-center items-center container mx-auto pt-[100px]">
       <div className="flex flex-col items-center">
         <h2 className="max-sm:text-[35px] max-md:text-[50px] text-[64px] font-bold">
           Explore the World of
@@ -13,7 +13,10 @@ const Hero = () => {
         >
           Cryptocurrencies
         </span>
-        <p className="mt-[10px] max-w-[730px] font-medium text-[20px] tracking-[1px] text-center max-md:text-[16px] max-md:max-w-[600px] max-sm:text-[14px] max-sm:max-w-[350px] max-sm:tracking-normal">
+        <p
+          className="mt-[10px] max-w-[730px] font-medium text-[20px] tracking-[1px] text-center
+        max-md:text-[16px] max-md:max-w-[600px] max-sm:text-[14px] max-sm:max-w-[350px] max-sm:tracking-normal"
+        >
           Stay updated with real-time cryptocurrency prices, trends, and
           insights. Discover a diverse range of digital assets and make informed
           decisions in the dynamic world of blockchain technology

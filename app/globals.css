@@ -14,5 +14,10 @@
 
 body {
   box-sizing: border-box;
-  @apply flex justify-center bg-[#111] text-white;
+  background-color: #111;
+  color: white;
+}
+
+.table__border-bottom {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
