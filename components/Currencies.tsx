@@ -26,7 +26,9 @@ const Currencies = () => {
         {/* Table Header */}
         <div
           className="grid grid-cols-6 lg:gap-2 max-md:hidden
-          bg-blue-400 px-4 lg:px-8 py-6"
+          bg-gradient-to-b from-primary-cyan to-primary-purple
+          rounded-tr-[10px] rounded-tl-[10px]
+          px-4 lg:px-8 py-6"
         >
           <h3 className="select-text font-bold text-[18px] lg:text-[24px] text-center">
             Currency
