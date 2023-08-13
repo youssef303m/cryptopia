@@ -18,20 +18,26 @@ const Currencies = () => {
   }, []);
   return (
     <section className="flex flex-col items-center mb-[100px]">
-      <h2 className="font-bold text-[48px] mb-[44px]">Market Updates</h2>
+      <h2 className="font-bold text-[32px] sm:text-[48px] md:text-[52px] lg:text-[64px] mb-[44px]">
+        Market Updates
+      </h2>
       {/* Table */}
-      <div>
+      <div className="px-4">
         {/* Table Header */}
         <div
-          className="grid grid-cols-6 gap-3
-          bg-blue-400 px-8 py-6"
+          className="grid grid-cols-6 lg:gap-2 max-md:hidden
+          bg-blue-400 px-4 lg:px-8 py-6"
         >
-          <h3 className="font-bold text-[24px] text-center">Currency</h3>
-          <h3 className="font-bold text-[24px] text-center col-span-2">
+          <h3 className="select-text font-bold text-[18px] lg:text-[24px] text-center">
+            Currency
+          </h3>
+          <h3 className="select-text font-bold text-[18px] lg:text-[24px] text-center col-span-2">
             Price
           </h3>
-          <h3 className="font-bold text-[24px] text-center">24h Change</h3>
-          <h3 className="font-bold text-[24px] text-center col-span-2">
+          <h3 className="select-text font-bold text-[18px] lg:text-[24px] text-center">
+            24h Change
+          </h3>
+          <h3 className="select-text font-bold text-[18px] lg:text-[24px] text-center col-span-2">
             Market Cap
           </h3>
         </div>
@@ -39,21 +45,24 @@ const Currencies = () => {
         <div>
           {Object.keys(currencies).map((currency, i) => (
             <div
-              className="grid grid-cols-6 gap-3
-              bg-[rgba(0,0,0,0.24)] px-8 py-6 table__border-bottom"
+              className="grid grid-cols-6 gap-3 max-md:grid-cols-2 max-md:grid-rows-4 max-md:gap-y-1 max-md:gap-x-6 max-sm:gap-x-0
+              bg-[rgba(0,0,0,0.24)] px-4 lg:px-8 py-6 table__border-bottom"
               key={currency}
             >
               {/* Currency Name */}
-              <div className="font-medium text-[20px] text-center capitalize">
+              <div className="md:hidden text-gray-400">Currency:</div>
+              <div className="select-text font-medium max-sm:text-[14px] text-[16px] lg:text-[20px] text-center capitalize">
                 {currency}
               </div>
               {/* Currency Price */}
-              <div className="font-medium text-[20px] text-center col-span-2">
+              <div className="md:hidden text-gray-400">Price:</div>
+              <div className="select-text font-medium max-sm:text-[14px] text-[16px] lg:text-[20px] text-center col-span-2 max-md:col-span-1">
                 ${currencies[currency].usd}
               </div>
               {/* Currency 24h Change */}
+              <div className="md:hidden text-gray-400">24h Change:</div>
               <div
-                className={`font-medium text-[20px] text-center flex justify-center items-center ${
+                className={`select-text font-medium max-sm:text-[14px] text-[16px] lg:text-[20px] text-center flex justify-center items-center ${
                   currencies[currency].usd_24h_change < 0
                     ? "text-red-500"
                     : "text-green-500"
@@ -72,8 +81,9 @@ const Currencies = () => {
                 %
               </div>
               {/* Currency Market Cap */}
-              <div className="font-medium text-[20px] text-center col-span-2">
-                {currencies[currency].usd_market_cap.toFixed(2)}
+              <div className="md:hidden text-gray-400">Market Cap:</div>
+              <div className="select-text font-medium max-sm:text-[14px] text-[16px] lg:text-[20px] text-center col-span-2 max-md:col-span-1">
+                {currencies[currency].usd_market_cap.toFixed(2)}$
               </div>
             </div>
           ))}
