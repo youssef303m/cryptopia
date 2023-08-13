@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 
@@ -53,7 +54,14 @@ const Currencies = () => {
             >
               {/* Currency Name */}
               <div className="md:hidden text-gray-400">Currency:</div>
-              <div className="select-text font-medium max-sm:text-[14px] text-[16px] lg:text-[20px] text-center capitalize">
+              <div className="select-text font-medium flex gap-[10px] items-center max-md:justify-center max-sm:text-[14px] text-[16px] lg:text-[20px] text-center capitalize">
+                <Image
+                  src={`/coins/${currency}.png`}
+                  width={40}
+                  height={40}
+                  className="max-md:w-[30px]"
+                  alt={`${currency} logo`}
+                />
                 {currency}
               </div>
               {/* Currency Price */}
