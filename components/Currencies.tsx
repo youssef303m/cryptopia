@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 
 const Currencies = () => {
+  // TODO: Change The API to CoinMarketCap's
   const [currencies, setCurrencies] = useState({});
   useEffect(() => {
     const getData = async () => {
@@ -15,55 +16,65 @@ const Currencies = () => {
     };
     getData();
   }, []);
-  console.log(currencies);
-
   return (
     <section className="flex flex-col items-center mb-[100px]">
       <h2 className="font-bold text-[48px] mb-[44px]">Market Updates</h2>
-      <div className="w-[1280px]">
+      {/* Table */}
+      <div>
+        {/* Table Header */}
         <div
-          className="bg-gradient-to-b from-primary-cyan to-primary-purple
-          flex justify-between px-[64px] py-[26px]
-          rounded-tr-[42px] rounded-tl-[42px]"
+          className="grid grid-cols-6 gap-3
+          bg-blue-400 px-8 py-6"
         >
-          <h3 className="font-bold text-[32px]">Currency</h3>
-          <h3 className="font-bold text-[32px]">Price</h3>
-          <h3 className="font-bold text-[32px]">24h Change</h3>
-          <h3 className="font-bold text-[32px]">Market Cap</h3>
+          <h3 className="font-bold text-[24px] text-center">Currency</h3>
+          <h3 className="font-bold text-[24px] text-center col-span-2">
+            Price
+          </h3>
+          <h3 className="font-bold text-[24px] text-center">24h Change</h3>
+          <h3 className="font-bold text-[24px] text-center col-span-2">
+            Market Cap
+          </h3>
         </div>
+        {/* Table Body */}
         <div>
           {Object.keys(currencies).map((currency, i) => (
             <div
-              className="bg-[rgba(0,0,0,0.24)] flex justify-between px-[64px] py-[30px]
-              table__border-bottom"
+              className="grid grid-cols-6 gap-3
+              bg-[rgba(0,0,0,0.24)] px-8 py-6 table__border-bottom"
               key={currency}
             >
-              <p className="font-medium text-[28px] capitalize">{currency}</p>
-              <p className="font-medium text-[28px]">
+              {/* Currency Name */}
+              <div className="font-medium text-[20px] text-center capitalize">
+                {currency}
+              </div>
+              {/* Currency Price */}
+              <div className="font-medium text-[20px] text-center col-span-2">
                 ${currencies[currency].usd}
-              </p>
-              <p
-                className={`font-medium text-[28px] flex items-center gap-[5px] ${
+              </div>
+              {/* Currency 24h Change */}
+              <div
+                className={`font-medium text-[20px] text-center flex justify-center items-center ${
                   currencies[currency].usd_24h_change < 0
                     ? "text-red-500"
                     : "text-green-500"
                 }`}
               >
-                $
+                <span>
+                  {currencies[currency].usd_24h_change < 0 ? (
+                    <BiSolidDownArrow size={15} />
+                  ) : (
+                    <BiSolidUpArrow size={15} />
+                  )}
+                </span>
                 {currencies[currency].usd_24h_change
                   .toFixed(2)
                   .replace("-", "")}
-                <span>
-                  {currencies[currency].usd_24h_change < 0 ? (
-                    <BiSolidUpArrow size={20} />
-                  ) : (
-                    <BiSolidDownArrow size={20} />
-                  )}
-                </span>
-              </p>
-              <p className="font-medium text-[28px]">
-                ${currencies[currency].usd_market_cap.toFixed(2)}
-              </p>
+                %
+              </div>
+              {/* Currency Market Cap */}
+              <div className="font-medium text-[20px] text-center col-span-2">
+                {currencies[currency].usd_market_cap.toFixed(2)}
+              </div>
             </div>
           ))}
         </div>
