@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 
@@ -48,7 +49,7 @@ const Currencies = () => {
         <div>
           {Object.keys(currencies).map((currency, i) => (
             <div
-              className="grid grid-cols-6 gap-3 max-md:grid-cols-2 max-md:grid-rows-4 max-md:gap-y-1 max-md:gap-x-6 max-sm:gap-x-0
+              className="grid grid-cols-6 gap-3 max-md:grid-cols-2 max-md:grid-rows-4 max-md:gap-y-1 max-md:gap-x-40 max-sm:gap-x-0
               bg-[rgba(0,0,0,0.24)] px-4 lg:px-8 py-6 table__border-bottom"
               key={currency}
             >
@@ -98,6 +99,56 @@ const Currencies = () => {
             </div>
           ))}
         </div>
+        {/* Other Currencies */}
+        <Link
+          href="https://www.coingecko.com/"
+          className="flex items-center mx-auto mt-4 md:ml-4
+          max-sm:flex-col"
+        >
+          {/* Icons */}
+          <div className="flex">
+            <Image
+              src="/coins/other-coins/bnb.png"
+              width={40}
+              height={40}
+              className="object-contain"
+              alt="bnb"
+            />
+            <Image
+              src="/coins/other-coins/polygon.png"
+              width={40}
+              height={40}
+              className="drop-shadow-[0_0px_10px_rgba(0,0,0,1)] z-[2] ml-[-10px] object-contain"
+              alt="bnb"
+            />
+            <Image
+              src="/coins/other-coins/shiba.png"
+              width={40}
+              height={40}
+              className="drop-shadow-[0_0px_10px_rgba(0,0,0,1)] z-[3] ml-[-10px] object-contain"
+              alt="bnb"
+            />
+            <Image
+              src="/coins/other-coins/tron.png"
+              width={40}
+              height={40}
+              className="drop-shadow-[0_0px_10px_rgba(0,0,0,1)] z-[4] ml-[-10px] object-contain"
+              alt="bnb"
+            />
+            <span className="bg-[#555555] min-w-[40px] min-h-[40px] rounded-full grid place-items-center z-[5] ml-[-10px] drop-shadow-[0_0px_10px_rgba(0,0,0,1)]">
+              50+
+            </span>
+          </div>
+          {/* Text */}
+          <div className="ml-6">
+            <h4 className="font-semibold text-[18px] max-sm:text-center max-sm:mt-2">
+              Explore multiple other assets
+            </h4>
+            <p className="font-normal text-[16px] text-[#D3D3D3]">
+              New assets are specially selected and added regularly.
+            </p>
+          </div>
+        </Link>
       </div>
     </section>
   );
