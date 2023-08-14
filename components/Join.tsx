@@ -17,7 +17,7 @@ const Join = () => {
           href="https://discord.com/"
           className="flex items-center font-bold gap-4 w-fit px-6 py-2 rounded-full mx-auto
           text-[28px] md:text-[36px] mt-4 md:mt-8
-          bg-gradient-to-r from-primary-purple to-primary-cyan"
+          join__btn"
         >
           <BsDiscord /> DISCORD
         </Link>
