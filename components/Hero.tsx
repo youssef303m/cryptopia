@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -24,14 +25,22 @@ const Hero = () => {
           insights. Discover a diverse range of digital assets and make informed
           decisions in the dynamic world of blockchain technology
         </p>
-        <a
+        <Link
+          href="#market"
+          className="mt-[40px] bg-purple-600 py-[15px] px-[30px] text-[24px] font-bold rounded-[15px]
+          max-md:text-[20px] max-sm:text-[16px] z-[0]
+          hero__btn"
+        >
+          Explore Market
+        </Link>
+        {/* <Link
           href="#market"
           className="mt-[40px] bg-purple-600 py-[15px] px-[30px] text-[40px] font-medium rounded-[15px]
           max-md:text-[30px] max-sm:text-[20px]
           duration-[0.3s] hover:drop-shadow-[0_0px_40px_rgba(209,164,255,0.25)]"
         >
           Explore Market
-        </a>
+        </Link> */}
       </div>
     </main>
   );
