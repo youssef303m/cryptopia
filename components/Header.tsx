@@ -60,13 +60,13 @@ const Header = () => {
           </ul>
         </nav>
         <div className="flex gap-[20px] max-sm:gap-[10px]">
-          <Link href="https://twitter.com/">
+          <Link href="https://twitter.com/" target="_blank">
             <BsTwitter
               className="text-[40px] max-sm:text-[30px]
           cursor-pointer duration-[0.3s] hover:text-primary-purple"
             />
           </Link>
-          <Link href="https://discord.com/">
+          <Link href="https://discord.com/" target="_blank">
             <BsDiscord
               className="text-[40px] max-sm:text-[30px]
           cursor-pointer duration-[0.3s] hover:text-primary-purple"

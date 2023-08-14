@@ -15,6 +15,7 @@ const Join = () => {
         </p>
         <Link
           href="https://discord.com/"
+          target="_blank"
           className="flex items-center font-bold gap-4 w-fit px-6 py-2 rounded-full mx-auto
           text-[28px] md:text-[36px] mt-4 md:mt-8
           join__btn"

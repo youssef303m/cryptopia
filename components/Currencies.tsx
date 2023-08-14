@@ -103,6 +103,7 @@ const Currencies = () => {
         {/* Other Currencies */}
         <Link
           href="https://www.coingecko.com/"
+          target="_blank"
           className="flex items-center mx-auto mt-4 md:ml-4
           max-sm:flex-col"
         >
