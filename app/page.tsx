@@ -1,4 +1,4 @@
-import { Header, Hero, Currencies, WhyUs, Join } from "@/components";
+import { Header, Hero, Currencies, WhyUs, Join, Footer } from "@/components";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
       <Currencies />
       <WhyUs />
       <Join />
+      <Footer />
     </div>
   );
 }
