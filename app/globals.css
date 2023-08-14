@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-purple rounded-[5px];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7508a3;
+}
+
 * {
   border: none;
   outline: none;
