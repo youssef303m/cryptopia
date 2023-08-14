@@ -1,5 +1,6 @@
 # Cryptopia, explore the world of cryptocurrencies
 
+Stay updated with real-time cryptocurrency prices, trends, and insights. Discover a diverse range of digital assets and make informed decisions in the dynamic world of blockchain technology
 ![Cryptopia](https://i.ibb.co/qk5MmWz/cryptopia-screenshot.png)
 
 ## Features
