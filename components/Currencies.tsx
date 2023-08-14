@@ -19,7 +19,8 @@ const Currencies = () => {
     getData();
   }, []);
   return (
-    <section className="flex flex-col items-center mb-[100px]">
+    <section className="flex flex-col items-center mb-[100px] relative">
+      <div className="w-4 h-4 absolute top-[-150px]" id="market" />
       <h2 className="font-bold text-[32px] sm:text-[48px] md:text-[52px] lg:text-[64px] mb-[44px]">
         Market Updates
       </h2>

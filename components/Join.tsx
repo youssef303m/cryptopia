@@ -4,7 +4,8 @@ import { BsDiscord } from "react-icons/bs";
 
 const Join = () => {
   return (
-    <section className="container mx-auto flex justify-center mt-[140px] mb-[140px]">
+    <section className="container mx-auto flex justify-center mt-[140px] mb-[140px] relative">
+      <div className="w-4 h-4 absolute top-[-180px]" id="join" />
       <div>
         <h3 className="text-center font-bold text-[32px] sm:text-[42px] md:text-[64px]">
           JOIN US VIA DISCORD

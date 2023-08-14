@@ -2,7 +2,10 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main className="h-screen flex justify-center items-center container mx-auto pt-[100px]">
+    <main
+      className="h-screen flex justify-center items-center container mx-auto pt-[100px]"
+      id="home"
+    >
       <div className="flex flex-col items-center">
         <h2 className="max-sm:text-[35px] max-md:text-[50px] text-[64px] font-bold">
           Explore the World of

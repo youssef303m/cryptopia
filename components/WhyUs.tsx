@@ -3,7 +3,8 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <section className="container mx-auto flex justify-center mt-[140px]">
+    <section className="container mx-auto flex justify-center mt-[140px] relative">
+      <div className="w-4 h-4 absolute top-[-180px]" id="why-us" />
       <div className="flex gap-[24px] items-center max-lg:flex-col px-[20px]">
         {/* Image and title (for small devices) */}
         <div className="lg:hidden">
