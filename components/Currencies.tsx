@@ -146,7 +146,7 @@ const Currencies = () => {
             <h4 className="font-semibold text-[18px] max-sm:text-center max-sm:mt-2">
               Explore multiple other assets
             </h4>
-            <p className="font-normal text-[16px] text-[#D3D3D3]">
+            <p className="font-normal text-[16px] max-sm:text-center text-[#D3D3D3]">
               New assets are specially selected and added regularly.
             </p>
           </div>
